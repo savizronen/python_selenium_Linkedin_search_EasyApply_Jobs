@@ -8,6 +8,8 @@ from selenium.webdriver.chrome.service import Service
 ACCOUNT_EMAIL = "Email"
 ACCOUNT_PASSWORD = "Password"
 
+
+
 ## chrome_driver_path
 chrome_driver_path = "C:\Development\chromedriver"
 serv = Service(chrome_driver_path)
@@ -30,6 +32,7 @@ sign_in = driver.find_element(By.CSS_SELECTOR, "#organic-div > form > div.login_
 sign_in.click()
 
 # Selecting the pages that we want to get the links of jobs in linkedin website.
+print(f'Collecting the links in the page: {0}')
 for page in range(2, 14):
     time.sleep(2)
     jobs_block = driver.find_elements(By.CSS_SELECTOR, "#main > div > section.scaffold-layout__list > div > ul")
